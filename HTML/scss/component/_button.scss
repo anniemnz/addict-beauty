@@ -1,0 +1,86 @@
+$padding-h: 40px;
+$padding-v: 15px;
+
+@mixin ro-btn {
+    @include easing-animation;
+    display: inline-block;
+    padding: $padding-v $padding-h;
+    font-size: 12px;
+    font-weight: 700;
+    outline: none;
+    word-spacing: 2px;
+    line-height: 1.2;
+    text-align: center;
+    background-color: transparent;
+    border:0;
+}
+
+@mixin ro-btn-bd($thick, $bd-color) {
+    @include ro-btn;
+    padding: ($padding-v - $thick) ($padding-h - $thick);
+    border: 1px solid $bd-color;
+}
+
+.ro-btn-1 {
+    @include ro-btn;
+    background-color: $main-color;
+    color: $light-color;
+
+    &:hover {
+        background-color: $dark-color;
+        color:$light-color;
+    }
+}
+
+.ro-btn-2 {
+    @include ro-btn;
+    background-color: $dark-color;
+    color: $light-color;
+
+    &:hover {
+        background-color: $main-color;
+        color:$light-color;
+    }
+}
+.ro-btn-3 {
+    @include ro-btn;
+    background-color: $light-color;
+
+    &:hover {
+        background-color: $main-color;
+        color:$light-color;
+    }
+}
+
+.ro-btn-bd-1 {
+    @include ro-btn-bd(1px, $dark-color);
+
+    &:hover {
+        background-color: $main-color;
+        border-color: $main-color;
+        color: $light-color;
+    }
+}
+
+.ro-btn-bd-2 {
+    @include ro-btn-bd(1px, $dark-color);
+    background-color: $light-color;
+
+    &:hover {
+        background-color: $main-color;
+        border-color: $main-color;
+        color: $light-color;
+    }
+}
+
+.ro-btn-bdr-1 {
+    @include ro-btn-bd(1px, $dark-color);
+    border-radius: 20px;
+    background-color: $lightgray-color;
+}
+
+.ro-btn-bdr-2 {
+    @include ro-btn-bd(1px, $dark-color);
+    background-color: $main-color;
+    border-radius: 20px;
+}

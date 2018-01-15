@@ -1,0 +1,43 @@
+input[type="text"],input[type="email"],input[type="search"], textarea, select {
+    @include easing-animation;
+    width: 100%;
+    outline: none;
+    background-color: $light-color;
+    border: 1px solid $dark-color;
+    padding: 5px 15px;
+
+    &:focus {
+        border-color: $main-color;
+    }
+}
+
+select {
+    height: 40px;
+}
+
+textarea {
+    resize: none;
+    height: 115px;
+}
+
+.placeholder {
+    color: $dark-color;
+}
+
+::-webkit-input-placeholder {
+    color: $dark-color;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $dark-color;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $dark-color;
+}
+
+:-ms-input-placeholder {
+    color: $dark-color;
+}

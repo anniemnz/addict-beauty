@@ -1,0 +1,30 @@
+VERSION 1.2.1
+
+1. Fixed Slider Responsive
+
+VERSION 1.2
+
+1. Add 2 Homepages Version
+2. Add Single Product Page
+3. Add Cart Page
+4. Add Checkout Page
+
+VERSION 1.1.3
+
+1. Add PHP Script for Reservation
+2. Add PHP Script for Contact
+
+VERSION 1.1.2
+
+1. Fixed bug with Dreamweaver
+
+VERSION 1.1.1
+
+1. Fixed bug with Onepage
+
+VERSION 1.1
+
+1. Fixed bug with Off canvas Nav
+2. Add 2 pages: 404 Error, Under Construction
+3. Add layer slider for Shopping Homepage
+4. Fix some small css bug.

@@ -1,0 +1,84 @@
+.ro-reservation-bg {
+    .ro-reservation-heading {
+        display: none;
+    }
+
+    .ro-light-text {
+        font-weight: 700;
+    }
+}
+
+.ro-reservation {
+    .ro-reservation-bg & {
+        @include layer-after-on-bg(rgba($light-color, 0.9));
+        background-image: url("../images/reservation.jpg");
+        background-size: cover;
+        border: 1px solid $gray-color;
+        margin-bottom: 80px;
+        margin-top: 30px;
+        padding-top: 85px;
+    }
+
+    input, select, option {
+        margin-bottom: 30px;
+    }
+
+    .ro-reservation-form {
+        .ro-submit {
+            font-size: $font-size-5;
+            font-weight: 600;
+            width: 100%;
+            height: 40px;
+            padding: 11px;
+        }
+    }
+}
+
+.ro-section-reservation-2 {
+    background-color: $lightgray-color;
+}
+
+.ro-contact-form {
+    input, select, option, textarea {
+        margin-bottom: 20px;
+        float: left;
+    }
+}
+
+.ro-map-iframe {
+    width: 100%;
+    height: 435px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid $gray-color;
+}
+
+.ro-contact-info-wrapper {
+    margin-bottom: 30px;
+
+    .ro-contact-info {
+        position: relative;
+        padding-left: 24px;
+        line-height: 2.5;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+@include breakpoint-max($screen-md) {
+    .ro-contact-info-wrapper {
+        .ro-contact-info {
+            @include center-block;
+        }
+    }
+
+    .ro-contact-form {
+        .pull-right, .pull-left {
+            float: none !important;
+        }
+    }
+}

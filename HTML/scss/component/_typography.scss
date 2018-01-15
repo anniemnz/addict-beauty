@@ -1,0 +1,136 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: $base-font-size;
+    color: $dark-color;
+    line-height: $base-line-height;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ro-font-regular {
+    font-weight: 400;
+}
+
+@mixin primaryfont {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+}
+
+@mixin seconfont {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include seconfont;
+    margin-bottom: 25px;
+
+    .ro-heading-h {
+        line-height: 1.6;
+    }
+}
+
+.ro-light-text {
+    font-weight: 400;
+}
+
+.ro-hr-heading {
+    text-align: center;
+
+    &:after {
+        @include center-block;
+        content: " ";
+        display: block;
+        width: 30px;
+        margin-top: 15px;
+        height: 0;
+        border-top: 1px solid $dark-color;
+    }
+
+    &.ro-left {
+        text-align: left;
+
+        &:after {
+            margin-left: 0;
+        }
+    }
+
+    &.ro-right {
+        text-align: right;
+
+        &:after {
+            margin-right: 0;
+        }
+    }
+}
+
+.ro-hr {
+    @include center-block;
+    width: 80%;
+    border-top: 1px solid $gray-color;
+    margin: 0 auto;
+
+    &.ro-full {
+        width: 100%;
+    }
+
+    .ro-color-light {
+        border-color: $light-color;
+    }
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+@for $i from 1 to 7 {
+    h#{$i} {
+        font-size: nth($font-size-list, $i);
+    }
+}
+
+@for $i from 1 to 7 {
+    .ro-font-size-#{$i} {
+        font-size: nth($font-size-list, $i);
+    }
+}
+
+::selection {
+    background: $main-color;
+    color: $light-color;
+}
+
+.ro-ellipsis {
+    overflow: hidden;
+}
+
+.ro-quote-content {
+    padding-top: 30px;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: 400;
+
+    q:before, q:after {
+        font-style: italic;
+        font-size: 30px;
+        line-height: 16px;
+        font-weight: 600;
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    .ro-author-name {
+        padding-top: 20px;
+        font-weight: 700;
+        text-align: right;
+        color: $main-color;
+    }
+}

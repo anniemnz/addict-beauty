@@ -1,0 +1,129 @@
+.ro-section-main-header {
+    #ro-header-background-slider {
+        ul {
+            li {
+                img {
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+    @include breakpoint-in($screen-sm,$screen-md) {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        min-height: 480px;
+        color: #FFFFFF;
+        overflow: hidden;
+        #ro-header-background-slider {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: -50%;
+            z-index: -1;
+            ul {
+                li {
+                    img {
+                        width: 200%;
+                    }
+                }
+            }
+        }
+    }
+}
+.ro-section-main-header-2 {
+    height: 100vh;
+    background: url("../images/slider-bg-3.jpg") center center no-repeat;
+    background-size: cover;
+    .ro-content {
+        padding-top: 300px;
+        padding-bottom: 100px;
+        display: table;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        > div {
+            display: table-cell;
+            position: relative;
+            vertical-align: middle;
+            text-align: center;
+            img {
+                max-width: 100%;
+                opacity: 0.8;
+                @include easing-animation;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            p {
+                margin-top: 40px;
+                font-size: 60px;
+                color: $light-color;
+            }
+        }
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            left: 0;
+            bottom: 40px;
+            text-align: center;
+            a {
+                width: 40px;
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                border: 1px solid $light-color;
+                border-radius: 50%;
+
+                &:before {
+                    color: $light-color;
+                    @include easing-animation;
+                    content: "a";
+                    font-family: "aqua icon" !important;
+                    font-size: 25px;
+
+                }
+                &:hover {
+                    border: 1px solid $main-color;
+                }
+                &:hover:before {
+                    color: $main-color;
+
+                }
+            }
+        }
+    }
+    @include breakpoint-in($screen-sm,$screen-md) {
+        height: auto;
+        .ro-content {
+            > div {
+                img {
+                    width: 80px;
+                }
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint-max($screen-sm) {
+        height: auto;
+        .ro-content {
+            padding-top: 200px;
+            > div {
+                img {
+                    width: 80px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

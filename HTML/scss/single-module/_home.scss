@@ -1,0 +1,99 @@
+.ro-home-slider-1-background {
+    @include size(1520px, 620px);
+
+    &:before, &:after {
+        @include size(1500px, 600px);
+        content: " ";
+        position: absolute;
+    }
+    $slider-background-color: $bg-color-1, $bg-color-2, $bg-color-3, $bg-color-4, $bg-color-5;
+
+    @for $i from 1 through 5 {
+        &.ro-behind-bg-#{$i}:before {
+            background-color: nth($slider-background-color, $i);
+        }
+
+        &.ro-front-bg-#{$i}:after {
+            background-color: nth($slider-background-color, $i);
+        }
+    }
+
+    &:before {
+        bottom: 0;
+        right: 0;
+    }
+
+    &:after {
+        top: 0;
+        left: 0;
+    }
+}
+
+.ro-slider-style-2-caption {
+    position: absolute;
+    color: $light-color;
+    border-bottom: 1px solid $light-color;
+    height: 25px;
+    width: 300px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.ro-slider-style-2-list {
+    font-size: $font-size-4;
+
+    &:before {
+        content: "•";
+        font-size: $font-size-3;
+        margin: 0 10px;
+    }
+}
+
+#ro-slider-style2-background {
+    @include easing-animation;
+}
+
+.ro-home-fullheight-container {
+    padding-top: 120px;
+}
+
+@include breakpoint-min($screen-sm) {
+    .ro-home-fullheight-container {
+        display: table;
+        height: 100vh;
+        width: 100%;
+
+        .ro-home-slider-2-wrapper {
+            display: table-cell;
+            vertical-align: bottom;
+        }
+    }
+}
+
+
+@include breakpoint-in($screen-sm, $screen-md) {
+    .ro-home-fullheight-container {
+        padding-top: 220px;
+    }
+}
+
+
+@include breakpoint-max($screen-sm) {
+    .ro-onepage-home, .ro-fullwidth-home {
+        text-align: center;
+        .ro-aqua-brand {
+            position: relative;
+            display: block;
+            margin-left: 0;
+            top: 15px;
+        }
+    }
+
+    .ro-onepage-home {
+        @include layer-after-on-bg(rgba($bg-color-5, 0.6));
+    }
+
+    .ro-fullwidth-home {
+        @include layer-after-on-bg(rgba($bg-color-3, 0.6));
+    }
+}

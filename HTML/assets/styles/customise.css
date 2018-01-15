@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/*Theme Name : Aqua Spa
+Theme URI    : http://annemarie.me
+Author       : AMW
+Author URI   : http://annemarie.me
+Version      : 1.0
+Text Domain  : progression
+/*-------------------------------------------------------*/
+/*
+* Component module
+*/
+/* + TYPOGRAPHY */
+/* + COLOR */
+/* + INPUT */
+/* + ICON */
+/* + BUTTON */
+/* + UTILITIES */
+/* + SECTION */
+/*
+* Common module
+*/
+/* + RESERVATION AND CONTACT */
+/* + NAVIGATOR */
+/*
+* Single module
+*/
+/* + HEADER */
+/* + FOOTER */
+/* + TEAM */
+/* + SERVICE */
+/* + MEMBERSHIP */
+/* + TESTIMONIAL */
+/* + HOME */
+/* + ABOUT */
+/* + SHOP */
+/* + SPACE */
+/* + ADVERTISE */
+/* + BLOG */
+/* + OTHER PAGE */
+/*
+* Component module
+*/
+
+/* logo size*/
+.ro-main-nav-style-2 .ro-brand{
+	height: 115px;
+}
+
+.ro-section-main-header-2{
+  background: url("../images/addict-b/tan-legs.jpg") center center no-repeat !important;
+    background-size: cover;	
+      height: 100vh;
+      width: 100%;
+}
+
+.padding-bottom{
+	padding-bottom: 90px;
+}
+
+.heart{
+	color: #dbab4e;
+}
+
+h5, h3, h4{
+	text-transform: uppercase;
+}
+
+.ro-bg-dark .ro-main-footer .ro-btn-bd-1:hover{
+	background-color: #dbab4e;
+}
+
+.map-button{
+	margin-top: 20px;
+}
+
+.ro-testimonial-2 .ro-item .ro-content .ro-name p{
+	background-color: #dbab4e;
+}
+
+.ro-bgc-6{
+	background-color: #444444;
+}
+
+.ro-specialize-2 .ro-specialize-content-wrapper .ro-specialize-content .ro-footer a:hover{
+	background-color: #dbab4e;
+}
+
+.footer-contact-icon{
+	padding-right: 5px;
+	color: #dbab4e;
+	font-size: 1.3em;
+}
+
+.footer-contact-icon:hover{
+	color: white;
+}
+
+.footer-hover:hover{
+	color: white;
+}
+
+.social-button{
+	color: #dbab4e;
+	font-size: 1.2em;
+}
+
+.social-button:hover{
+	color: white;
+}
+
+.ro-images-slider .ro-item .ro-image img{
+	opacity: 0.7;
+}
+
+.ro-images-slider .ro-item .ro-image img:hover{
+	opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .logo-mobile-screen {
+        width: auto;
+        height: 80px; /* change the logo height here */
+    }
+}
+
+.ro-service-list ul .ro-price{
+	width: 70px;
+}
+
+.ro-service-list ul .ro-service{
+	padding-right: 30px;
+}
+
+.ro-service-list ul{
+	padding-left: 20px;
+}
+
+.ro-nav-content > li:not(:first-child) a:hover{
+	border-color: #dbab4e;
+}
+
+.ro-main-nav-style-1 .ro-brand img{
+	max-height: 120px;
+}
+
+.ro-color-main{
+	color: #dbab4e;
+}
+
+.price-info{
+	color: #868585;
+}
+
+.ro-quote-content .ro-author-name{
+	color: #dbab4e;
+}
+
+.ro-section>.ro-section-mb{
+	margin-top: 60px;
+}
+
+.tan-button{
+	text-transform: uppercase;
+    background-color: #dbab4e;
+    border: none;
+    color: white;
+}
+
+.tan-button:hover{
+	background-color: #868585;
+	border: white;
+}
+
+.ro-main-nav-style-2{
+	padding: 15px 0;
+}
+
+.ro-specialize-2 .ro-specialize-content-wrapper .ro-specialize-content .ro-footer{
+	margin-top: 30px;
+}
+
+.ro-contact-info{
+	font-size: 14px;
+}
+
+.ro-btn-1{
+	background-color: #dbab4e;
+}
+
+.contact-border{
+	border-color: #ffffff;
+}
+
+
+
+
+

@@ -1,0 +1,828 @@
+.ro-checkout-process {
+    margin-top: 85px;
+    margin-bottom: 140px;
+
+    .ro-hr-line {
+        width: 100%;
+        border-top: 1px solid $gray-color;
+        position: relative;
+        a {
+            div{
+                @include easing-animation;
+                border-radius: 50%;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border: 1px solid $gray-color;
+                background-color: $light-color;
+                transform: translate(-50%,-50%);
+                &:after {
+                    @include easing-animation;
+                    content: "";
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    opacity: 0;
+                }
+            }
+
+            &:nth-of-type(1) {
+                div {
+                    left: 0;
+                    border: 1px solid $main-color;
+                    &:after {
+                        opacity: 1;
+                    }
+
+                }
+            }
+            &:nth-of-type(2) {
+                div {
+                    left: 50%;
+                }
+                &:hover {
+                    div {
+                        border: 1px solid $main-color;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                div {
+                    left: 100%;
+                }
+                &:hover {
+                    div {
+                        border: 1px solid $main-color;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        span {
+            position: absolute;
+            top: 20px;
+            width: 70px;
+            left: 0;
+            transform: translate(-50%,0);
+            text-align: center;
+            font-size: $font-size-4;
+            &:nth-of-type(1) {
+                left: 0;
+                font-weight: 700;
+            }
+            &:nth-of-type(2) {
+                left: 50%;
+            }
+            &:nth-of-type(3) {
+                left: 100%;
+            }
+        }
+    }
+    &.ro-process-2 {
+        .ro-hr-line {
+            a {
+                &:nth-of-type(1) {
+                    div {
+                        border: 2px solid $gray-color;
+                        &:after {
+                            content: "4";
+                            background-color: transparent;
+                            top: 0;
+                            opacity: 1;
+                            font-family: "aqua icon";
+                            color: $main-color;
+                        }
+                    }
+                }
+                &:nth-of-type(2) {
+                    div {
+                        border: 1px solid $main-color;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            span {
+                &:nth-of-type(2) {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    @include breakpoint-min($screen-md) {
+        padding-right: 83px;
+        padding-left: 40px;
+    }
+    @include breakpoint-max($screen-md) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+.ro-checkout-information {
+    .ro-customer-info {
+
+        > p {
+            &:first-of-type {
+                a {
+                    margin-left: 25px;
+                    color: $main-color;
+                    @include easing-animation;
+                    &:after {
+                        @include easing-animation;
+                        font-family: "aqua icon";
+                        content: "\e086";
+                        margin-left: 10px;
+                        vertical-align: middle;
+                        color: $main-color;
+                        font-size: $font-size-7;
+                    }
+                    &:hover {
+                        color: $gray-color;
+                    }
+                    &:hover:after {
+                        color: $gray-color;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                margin-bottom: 15px;
+            }
+        }
+        .ro-account {
+            input {
+                &:focus {
+                    border: 1px solid $main-color;
+                }
+                margin-bottom: 30px;
+                border: 1px solid $gray-color;
+            }
+        }
+        .ro-choice {
+            label {
+                cursor: pointer;
+                font-weight: 600;
+                span {
+                    i {
+                        font-weight: 400;
+                    }
+                }
+                input[type="radio"] {
+                    display: none;
+                    & + span:before {
+                        @include easing-animation;
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        vertical-align: middle;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        border: 1px solid $light-color;
+                        box-shadow: 0 0 0 1px $main-color;
+                    }
+                    &:checked + span:before {
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+        .ro-divide {
+            border-bottom: 1px solid $gray-color-2;
+            margin-top: 40px;
+        }
+    }
+    .ro-shipping {
+        padding-top: 55px;
+        padding-bottom: 85px;
+        h4 {
+            margin-bottom: 60px;
+        }
+        .ro-content {
+            div {
+                @include clearfix;
+                margin-bottom: 20px;
+                span {
+                    line-height: 40px;
+                }
+                input {
+                    border: 1px solid $gray-color;
+                    &:focus {
+                        border: 1px solid $main-color;
+                    }
+                }
+
+            }
+        }
+        .ro-button {
+            margin-top: 60px;
+            text-align: center;
+            a {
+                @include easing-animation;
+                border: 0;
+                background-color: $dark-color;
+                color: $light-color;
+                font-size: $font-size-6;
+                padding: 15px 48px;
+                &:hover {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+    @include breakpoint-min($screen-sm) {
+        .ro-customer-info {
+            .ro-choice {
+                label {
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+    @include breakpoint-min($screen-md) {
+        .ro-customer-info {
+            .ro-account {
+                input {
+                    width: 250px;
+                    &:nth-of-type(2) {
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+        .ro-shipping {
+            .ro-content {
+                div {
+                    span {
+                        display: inline-block;
+                        width: 30%;
+                        float: left;
+                    }
+                    input {
+                        width: 70%;
+                        display: inline-block;
+                    }
+                }
+            }
+            .ro-button {
+                padding-right: 100px;
+                text-align: right;
+            }
+        }
+    }
+    @include breakpoint-min($screen-lg) {
+        .ro-customer-info {
+            .ro-account {
+                input {
+                    width: 270px;
+                }
+            }
+            .ro-divide {
+                width: 580px;
+            }
+        }
+        .ro-shipping {
+            .ro-content {
+                div {
+                    padding-right: 80px;
+                }
+            }
+            .ro-button {
+                padding-right: 200px;
+                text-align: right;
+            }
+        }
+    }
+    @include breakpoint-max($screen-md) {
+
+    }
+}
+.ro-checkout-information-2 {
+    .ro-divide {
+        border-bottom: 1px solid $gray-color-2;
+    }
+    .ro-customer-info {
+        .ro-title {
+            position: relative;
+            margin-bottom: 40px;
+            h4 {
+                margin-bottom: 0;
+            }
+            span {
+                position: absolute;
+                right: 0;
+                top: 0;
+                a {
+                    color: $main-color;
+                    &:hover {
+                        color: $gray-color;
+                    }
+                }
+            }
+        }
+        .ro-content {
+            p {
+                margin-bottom: 0;
+            }
+            .ro-info {
+                &:first-of-type {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .ro-divide {
+            margin-top: 40px;
+        }
+    }
+    .ro-shipping {
+        padding-top: 45px;
+        h4 {
+            margin-bottom: 40px;
+        }
+        .ro-content {
+            @include clearfix;
+            background-color: $lightgray-color-3;
+            padding: 20px 30px;
+            p {
+                margin-bottom: 0;
+                display: inline-block;
+                width: 85%;
+            }
+            span {
+                width: 15%;
+                display: inline-block;
+                clear: both;
+                float: right;
+                text-align: right;
+            }
+        }
+        .ro-divide {
+            margin-top: 60px;
+        }
+    }
+    .ro-bill {
+        label {
+            cursor: pointer;
+            font-weight: 600;
+            span {
+                position: relative;
+            }
+            input[type="radio"] {
+                display: none;
+                & + span:before {
+                    content: '';
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    vertical-align: middle;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    box-shadow: 0 0 0 1px $gray-color;
+                }
+                &:checked + span:before {
+                    box-shadow: 0 0 0 1px $main-color;
+                    background-color: $main-color;
+                }
+                &:checked + span:after {
+                    content: "4";
+                    font-family: "aqua icon";
+                    position: absolute;
+                    top: -3px;
+                    left: 1px;
+                    font-size: 16px;
+                    color: $light-color;
+                }
+            }
+        }
+        .ro-credit-card {
+            @include clearfix;
+            .ro-head {
+                .ro-image {
+                    clear: both;
+                    float: right;
+                }
+            }
+            .ro-body {
+                background-color: $lightgray-color-3;
+                padding: 20px 30px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                .ro-info {
+                    @include clearfix;
+                    > p {
+                        @include clearfix;
+                        display: inline-block;
+                        margin-bottom: 20px;
+                        &:nth-of-type(1) {
+                            width: 25%;
+                            float: left;
+                            span {
+                                float: right;
+                                text-align: right;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            width: 75%;
+                            padding-left: 120px;
+                        }
+                    }
+                    &:last-of-type {
+                        > p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .ro-paypal {
+            @include clearfix;
+            .ro-image {
+                clear: both;
+                float: right;
+            }
+        }
+    }
+    .ro-button {
+        margin-top: 60px;
+        margin-bottom: 85px;
+        text-align: center;
+        a {
+            @include easing-animation;
+            border: 0;
+            background-color: $dark-color;
+            color: $light-color;
+            font-size: $font-size-6;
+            padding: 15px 60px;
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+    }
+    @include breakpoint-min($screen-lg) {
+        .ro-divide {
+            width: 580px;
+        }
+        .ro-customer-info {
+            .ro-title {
+                span {
+                    right: 80px;
+                }
+            }
+        }
+        .ro-shipping {
+            .ro-content {
+                margin-right: 80px;
+            }
+        }
+        .ro-bill {
+            margin-right: 80px;
+        }
+        .ro-button {
+            margin-right: 80px;
+        }
+    }
+    @include breakpoint-max($screen-sm) {
+        .ro-bill {
+            .ro-credit-card {
+                .ro-body {
+                    .ro-info {
+                        > p {
+                            &:nth-of-type(1) {
+                                width: 40%;
+                            }
+                            &:nth-of-type(2) {
+                                width: 60%;
+                                padding-left: 0;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint-max($screen-xs) {
+        .ro-bill {
+            .ro-credit-card {
+                .ro-head {
+                    .ro-image {
+                        img {
+                            width: 100px;
+                        }
+                    }
+                }
+                .ro-body {
+                    .ro-info {
+                        > p {
+                            &:nth-of-type(1) {
+                                width: 50%;
+                            }
+                            &:nth-of-type(2) {
+                                width: 50%;
+                                padding-left: 0;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+            .ro-paypal {
+                .ro-image {
+                    img {
+                        width: 134.4px;
+                    }
+                }
+            }
+        }
+    }
+}
+.ro-checkout-summary {
+    font-family: 'Roboto Slab', serif;
+    border: 1px solid $gray-color-2;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    font-weight: 400;
+    .ro-title {
+        background-color: $lightgray-color;
+        padding: 25px 35px;
+        h4 {
+            text-align: center;
+            margin: 0px;
+        }
+    }
+    .ro-body {
+        padding: 0 35px;
+        form {
+            .ro-item {
+                @include clearfix;
+                padding: 40px 0 0;
+                font-size: $font-size-6;
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid $gray-color-2;
+                }
+                .ro-image {
+                    width: 25%;
+                    float: left;
+                    padding-bottom: 40px;
+                    img {
+                        width: 100%;
+                        @include easing-animation;
+                        opacity: 1;
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                > div {
+                    &, .ro-name, .ro-quantity, .ro-item-color, .ro-price {
+                        display: inline-block;
+                    }
+                    &:nth-of-type(2) {
+                        width: 75%;
+                        padding: 0 20px;
+                        .ro-name {
+                            width: 75%;
+                            float: left;
+                            a {
+                                &:hover {
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                        .ro-quantity {
+                            width: 25%;
+                            p {
+                                margin-bottom: 0;
+                                text-align: right;
+                                span {
+                                    margin-left: 25px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        width: 75%;
+                        padding: 0 20px;
+                        .ro-item-color {
+                            width: 50%;
+                            float: left;
+                            label {
+                                cursor: pointer;
+                                font-weight: 600;
+                                span {
+                                }
+                                input[type="radio"] {
+                                    display: none;
+                                    & + span:before {
+                                        content: '';
+                                        display: inline-block;
+                                        width: 10px;
+                                        height: 10px;
+                                        vertical-align: middle;
+                                        border-radius: 50%;
+                                        margin-right: 10px;
+                                    }
+                                    & + span:after {
+                                        @include easing-animation;
+                                        content: "";
+                                        display: block;
+                                        width: 10px;
+                                        margin-top: -3px;
+                                        border-top: 1px solid $light-color;
+                                    }
+                                    &:checked + span:after {
+                                        border-top: 1px solid $main-color;
+                                    }
+                                }
+                                &:last-of-type {
+                                    input[type="radio"] + span:before {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .ro-price {
+                            width: 50%;
+                            p {
+                                margin-bottom: 0;
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+                &.ro-product-1 {
+                    > div {
+                        &:nth-of-type(3) {
+                            .ro-item-color {
+                                label {
+                                    &.ro-type-1 {
+                                        input[type="radio"] + span:before {
+                                            background-color: $input-color-1;
+                                        }
+                                    }
+                                    &.ro-type-2 {
+                                        input[type="radio"] + span:before {
+                                            background-color: $input-color-2;
+                                        }
+                                    }
+                                    &.ro-type-3 {
+                                        input[type="radio"] + span:before {
+                                            background-color: $input-color-3;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ro-product-2 {
+                    > div {
+                        &:nth-of-type(3) {
+                            .ro-item-color {
+                                label {
+                                    &.ro-type-1 {
+                                        input[type="radio"] + span:before {
+                                            background-color: $input-color-4;
+                                        }
+                                    }
+                                    &.ro-type-2 {
+                                        input[type="radio"] + span:before {
+                                            background-color: $input-color-2;
+                                        }
+                                    }
+                                    &.ro-type-3 {
+                                        input[type="radio"] + span:before {
+                                            background-color: $input-color-5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ro-footer {
+        > div {
+            padding: 0 35px;
+            background-color: $lightgray-color;
+            p {
+                @include clearfix;
+                margin: 0px;
+                padding: 20px 0;
+                color: $darkgray-color;
+                font-size: $font-size-7;
+                vertical-align: middle;
+                line-height: 25px;
+                span {
+                    font-size: $font-size-6;
+                    clear: both;
+                    float: right;
+                }
+            }
+            .ro-divide {
+                width: 100%;
+                border-bottom: 1px solid $gray-color-2;
+            }
+            &:last-of-type {
+                background-color: $light-color;
+                p {
+                    padding: 30px 0;
+                    display: block;
+                    span {
+                        font-size: $font-size-4;
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+    &.ro-style-2 {
+        .ro-title {
+            background-color: $lightgray-color-3;
+        }
+        .ro-footer {
+            > div {
+                background-color: $lightgray-color-3;
+                &:last-of-type {
+                    background-color: $light-color;
+                }
+            }
+        }
+    }
+    @include breakpoint-min($screen-sm) {}
+    @include breakpoint-min($screen-md) {}
+    @include breakpoint-min($screen-lg) {
+        .ro-body {
+            form {
+                .ro-item {
+                    > div {
+                        &:nth-of-type(2) {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint-max($screen-md) {
+        max-width: 456px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+    @include breakpoint-max($screen-xs) {
+        .ro-body {
+            form {
+                .ro-item {
+                    .ro-image {
+                        width: 100%;
+                        float: none;
+                        text-align: center;
+                        img {
+                            width: 100%;
+                            max-width: 150px;
+                        }
+                    }
+                    > div {
+                        &:nth-of-type(2) {
+                            width: 100%;
+                            padding: 0;
+                            .ro-name {
+                                width: 70%;
+                            }
+                            .ro-quantity {
+                                width: 30%;
+                            }
+                        }
+                        &:nth-of-type(3) {
+                            width: 100%;
+                            padding: 0;
+                            margin-top: 10px;
+                            margin-bottom: 30px;
+                            .ro-item-color {
+                                width: 50%;
+                                float: left;
+                            }
+                            .ro-price {
+                                text-align: right;
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

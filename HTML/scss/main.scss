@@ -1,0 +1,113 @@
+/*Theme Name : Aqua Spa
+Theme URI    : http://themeforest.net/user/themeroyal
+Author       : THEMEROYAL
+Author URI   : http://themeforest.net/user/themeroyal
+Version      : 1.0
+Text Domain  : progression
+/*-------------------------------------------------------*/
+
+//SCSS component
+@import "scss-component/variables";
+@import "scss-component/common-mixin";
+
+/*
+* Component module
+*/
+/* + TYPOGRAPHY */
+/* + COLOR */
+/* + INPUT */
+/* + ICON */
+/* + BUTTON */
+/* + UTILITIES */
+/* + SECTION */
+
+/*
+* Common module
+*/
+/* + RESERVATION AND CONTACT */
+/* + NAVIGATOR */
+
+/*
+* Single module
+*/
+/* + HEADER */
+/* + FOOTER */
+/* + TEAM */
+/* + SERVICE */
+/* + MEMBERSHIP */
+/* + TESTIMONIAL */
+/* + HOME */
+/* + ABOUT */
+/* + SHOP */
+/* + SPACE */
+/* + ADVERTISE */
+/* + BLOG */
+/* + OTHER PAGE */
+
+/*
+* Component module
+*/
+/* TYPOGRAPHY */
+@import "component/typography";
+
+/* COLOR */
+@import "component/color";
+
+/* INPUT */
+@import "component/input";
+
+/* ICON */
+@import "component/icon";
+
+/* BUTTON */
+@import "component/button";
+
+/* UTILITIES */
+@import "component/util";
+
+/* SECTION */
+@import "component/section";
+
+/*
+* Common module
+*/
+/* RESERVATION AND CONTACT */
+@import "common/form";
+/* NAVIGATOR */
+@import "common/nav";
+
+/*
+* Single module
+*/
+/* HEADER */
+@import "single-module/header";
+/* FOOTER */
+@import "single-module/footer";
+/* TEAM */
+@import "single-module/team";
+/* SERVICE */
+@import "single-module/service";
+/* MEMBERSHIP */
+@import "single-module/membership";
+/* TESTIMONIAL */
+@import "single-module/testimonial";
+/* HOME */
+@import "single-module/home";
+/* ABOUT */
+@import "single-module/about";
+/* SHOP */
+@import "single-module/shop";
+/* SPACE */
+@import "single-module/space";
+/* ADVERTISE */
+@import "single-module/advertise";
+/* BLOG */
+@import "single-module/blog";
+/* OTHER PAGE */
+@import "single-module/small-page";
+/* CART PAGE */
+@import "single-module/cart";
+/* CHECK OUT */
+@import "single-module/checkout";
+/* PRODUCT */
+@import "single-module/product";

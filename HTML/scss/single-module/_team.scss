@@ -1,0 +1,47 @@
+.ro-team-item {
+    @include center-block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 370px;
+
+    .ro-content {
+        h5 {
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            @include center-block;
+        }
+
+        .ro-social li {
+            color: $darkgray-color;
+            font-size: 18px;
+        }
+    }
+    .ro-section-team & {
+        margin-bottom: 0px;
+        margin-top: 30px;
+        padding-top: 30px;
+        .ro-image {
+            img {
+                @include easing-animation;
+                cursor: pointer;
+                opacity: 0.9;
+                transform: scale(0.97);
+                transform-origin: 50% 100%;
+            }
+            &:hover {
+                img {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+.ro-sectionteam {
+    padding-top: 10px;
+}
